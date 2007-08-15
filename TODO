@@ -1,0 +1,7 @@
+- Both gnut_build_msg_hdr_given_msg_id() and gnut_build_msg_hdr() have
+  code duplication between the two of them. It would make more sense if
+  the gnut_build_msg_hdr() function used a modified version of
+  gnut_build_msg_id() function to initially create the message id and
+  then pass the newly generated message id onto a call to the
+  gnut_build_msg_hdr_given_msg_id() within the gnut_build_msg_hdr()
+  function. This would eliminate the code duplication.

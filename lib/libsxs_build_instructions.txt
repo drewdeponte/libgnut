@@ -1,0 +1,3 @@
+Perform the following from the lib_sxs project base directory.
+
+./bootstrap.sh && ./configure --target=i586-mingw32msvc --host=i586-mingw32msvc --build=i686-pc-linux-gnu CFLAGS='-Wall -Werror' && make
