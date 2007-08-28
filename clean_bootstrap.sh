@@ -31,3 +31,4 @@ rm -f Makefile.in
 rm -f src/Makefile.in
 #rm -f testing/Makefile.in
 rm -f src/*~
+rm -f mkinstalldirs

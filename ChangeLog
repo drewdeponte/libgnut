@@ -26,6 +26,12 @@
 
 * gnut_pong_msg.c (_gnut_free_pong_msg_payload): Implemented this function to take in a gnut_pong_payload_t type and free any dynamically allocated data members and cleanup anything required to cleanup before either reusing the gnut_pong_payload_t type or destroying it.
 
+* gnut_pong_msg.h (n/a): Added a newline at the end of the file to make mingw32 compiler happy.
+
+* gnut_ping_msg.h (n/a): Added a newline at the end of the file to make mingw32 compiler happy.
+
+* clean_bootstrap.sh (n/a): Added a line to have it remove mkinstalldirs file that is produced on Mac OS X machines when using GNU Tools to build.
+
 2006-12-04 Andrew De Ponte <cyphactor@socal.rr.com>
 
 * Cleaned up the source tree.
