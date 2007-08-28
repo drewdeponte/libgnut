@@ -1,3 +1,33 @@
+2007-08-27 Andrew De Ponte <cyphactor@gmail.com>
+
+* gnut_ping_msg.h (n/a): I created the gnut_ping_msg.h file mainly for consistency within the project as a place to hold gnutella ping message payload specific types and support function declarations. I did this despite the fact that the ping payload as of the current specification is an empty payload.
+
+* gnut_ping_msg.c (n/a): I created the gnut_ping_msg.c file mainly for consistency within the project as a place to hold gnutella ping message payload specific type definitions and support function definitions. I did this despite the fact that the ping payload as of the current specification is an empty payload.
+
+* gnut_pong_msg.h (n/a): I created the gnut_pong_msg.h file as a place to hold gnutella pong message payload specific types and support function declarations.
+
+* gnut_pong_msg.c (n/a): I created the gnut_pong_msg.c file as a place to hold gnutella pong message payload specific type definitions and support function definitions.
+
+* gnut_pong_msg.h (gnut_pong_payload_t): I defined the gnut_pong_payload structure and created a type of it called gnut_pong_payload_t.
+
+* gnut_pong_msg.h (_gnut_parse_pong_msg_payload): Added this functions declaration.
+
+* gnut_pong_msg.c (_gnut_parse_pong_msg_payload): Implemented this function to take in the raw payload read off the wire and parse it into the gnut_pong_payload_t type.
+
+* gnut_pong_msg.h (_gnut_build_pong_msg_payload): Added this function declaration.
+
+* gnut_pong_msg.c (_gnut_build_pong_msg_payload): Implemented this function to take in a gnut_pong_payload_t type and output the byte packed/encoded form ready for sending on the wire.
+
+* gnut_pong_msg.h (_gnut_calc_pong_msg_payload_len): Added this function declaration.
+
+* gnut_pong_msg.c (_gnut_calc_pong_msg_payload_len): Implemented this function to take in a gnut_pong_payload_t type and output what the length of the message payload would be in bytes after being built using _gnut_build_pong_msg_payload.
+
+* gnut_pong_msg.h (_gnut_free_pong_msg_payload): Added this function declaration.
+
+* gnut_pong_msg.c (_gnut_free_pong_msg_payload): Implemented this function to take in a gnut_pong_payload_t type and free any dynamically allocated data members and cleanup anything required to cleanup before either reusing the gnut_pong_payload_t type or destroying it.
+
 2006-12-04 Andrew De Ponte <cyphactor@socal.rr.com>
 
 * Cleaned up the source tree.
+
+

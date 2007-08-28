@@ -21,7 +21,7 @@ AC_PREREQ(2.59)
 AC_INIT(Gnutella Library, 0.1.0, cyphactor@gmail.com, lib_gnut)
 AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/gnut_msgs.c])
-AC_CONFIG_HEADER([src/config.h])
+AM_CONFIG_HEADER([src/config.h])
 
 # checks for programs
 AC_LIBTOOL_WIN32_DLL
