@@ -22,7 +22,8 @@
 
 #include "gnut_pong_msg.h"
 
-int _gnut_parse_pong_msg_payload(gnut_pong_payload_t *pl, unsigned char *raw_pl, sxs_uint32_t raw_pl_len) {
+int _gnut_parse_pong_msg_payload(gnut_pong_payload_t *pl,
+    unsigned char *raw_pl, sxs_uint32_t raw_pl_len) {
 
     unsigned char *tmp_p;
     
@@ -42,7 +43,8 @@ int _gnut_parse_pong_msg_payload(gnut_pong_payload_t *pl, unsigned char *raw_pl,
     return 0;
 }
 
-int _gnut_build_pong_msg_payload(gnut_pong_payload_t *pl, unsigned char *raw_pl) {
+int _gnut_build_pong_msg_payload(gnut_pong_payload_t *pl,
+    unsigned char *raw_pl) {
    
     unsigned char *tmp_p;
     
@@ -64,7 +66,8 @@ int _gnut_build_pong_msg_payload(gnut_pong_payload_t *pl, unsigned char *raw_pl)
 }
 
 int _gnut_calc_pong_msg_payload_len(gnut_pong_payload_t *pl) {
-    return (sizeof(sxs_uint16_t) + sizeof(sxs_uint32_t) + sizeof(sxs_uint32_t) + sizeof(sxs_uint32_t));
+    return (sizeof(sxs_uint16_t) + sizeof(sxs_uint32_t) + \
+        sizeof(sxs_uint32_t) + sizeof(sxs_uint32_t));
 }
 
 void _gnut_free_pong_msg_payload(gnut_pong_payload_t *pl) {

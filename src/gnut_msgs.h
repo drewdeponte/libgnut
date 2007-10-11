@@ -35,6 +35,7 @@ extern "C" {
 
 #include "gnut_ping_msg.h"
 #include "gnut_pong_msg.h"
+#include "gnut_bye_msg.h"
 
 #define GNUT_MSG_ID_LEN 16 /**< Length of Message ID in bytes */
 #define GNUT_INITIAL_TTL 0x07 /**< Initial TTL (time-to-live) */
@@ -68,10 +69,10 @@ typedef struct GNUT_EXPORT gnut_msg {
          */
          
         struct gnut_pong_payload pong;
+        struct gnut_bye_payload bye;
         /*
         struct gnut_query_payload query;
         struct gnut_query_hit_payload query_hit;
-        struct gnut_bye_payload bye;
         */
     } payload;
 } gnut_msg_t;
