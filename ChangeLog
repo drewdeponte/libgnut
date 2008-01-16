@@ -1,3 +1,7 @@
+2008-01-16 Andrew De Ponte <cyphactor@gmail.com>
+
+* source:trunk/configure.ac (): Modified it to handle properly checking the endianness when building universal binaries on Mac OS X.
+
 2007-08-27 Andrew De Ponte <cyphactor@gmail.com>
 
 * gnut_ping_msg.h (n/a): I created the gnut_ping_msg.h file mainly for consistency within the project as a place to hold gnutella ping message payload specific types and support function declarations. I did this despite the fact that the ping payload as of the current specification is an empty payload.
